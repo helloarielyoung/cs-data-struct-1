@@ -1,0 +1,82 @@
+
+Runtime
+
+    When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+
+    Answer:  O(n) because you have to look at every cracker until you find the elephant.  An arugment might be made for O(1) if you dump all the crackers out at once and make a snap determiniation whether or not there was an elephant, but you have to be able to see all the crackers at once for that to work, so the larger the box the less likely it could be O(1) so I'll stick with O(n) as my answer.
+
+    Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
+        O(1)
+        O(log n)
+        O(n)
+        O(n log n)
+        O(n^2)
+        O(2^n)
+
+Stacks and Queues
+
+    In the following cases, would a stack or queue be a more appropriate data structure?
+        1) The process of loading and unloading pallets onto a flatbed truck
+           Answer: FILO, so a stack
+
+        2) Putting bottle caps on bottles of beer as they roll down an assembly line
+            Answer:  a queue
+
+        3) Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2)
+            Answer:  a stack
+
+    Describe two more situations where a queue would be an appropriate data structure.
+        Answer:  Waiting in line at the grocery store (though I hope they have one queue with many servers, since that's more efficient than multiple queues!)
+        Answer:  Service requests for software support.
+    
+    Describe two more situations where a stack would be an appropriate data structure.
+        Answer:  stacking books (sideways) on my overly-full bookcase, and then getting them back off again.
+        Answer:  Loading and unload new automobiles on a transport truck.
+
+Linked Lists
+
+    Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+
+    Answer:  The box labeled "LLIST" is the instance of the linked list, and the "head" box is it's head attribute, which would contain the value "Apple" in this example.  The nodes are Apple, Berry, Cherry.  The tail is Cherry.  Within the node boxes, Apple, Berry and Cherry are the data, and "next" is the attribute which points to the next item in the linked list (for Apple, this will have the value "Berry", for Berry, "Cherry", and for Cherry, "None".)  The arrows represent the direction of the links.
+
+    What’s the difference between doubly- and singly-linked lists?
+
+    Answer:  in a singly-linked list, each node keeps track of the Next value in the list, so the list goes only in one direction.  In a doubly-linked list, each node keeps track of the Next value and the Previous value, so the links go in both directions.
+
+    Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+
+    If you don't keep track of the tail, then you have to iterate through the entire list to find the tail in order to append to it.  By keeping track of the tail as an attribute of the linked list, you can append without iterating through the whole list.  You just append to the tail, and update the list's tail attribute with the new value.
+
+Trees
+
+    Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burritos (starting at food)? (Assume nodes are enqueued in left-to-right order.) Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+    Answer:
+        food
+        Italian
+        Indian
+        Mexican
+        lasagna
+        pizza
+        tikka masala
+        saag
+        burritos
+        Found burritos
+
+    Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? (Assume nodes are pushed in left-to-right order.) Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+    How is a binary search tree different from other trees?
+
+    Answer:
+        food
+        Mexican
+        enchilladas
+        tacos
+        burritos
+        Indian
+        saag
+        tikka masala
+        Italian
+        pizza
+        Sicillian
+        New York Style
+        Chicago-style
